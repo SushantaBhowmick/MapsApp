@@ -1,8 +1,9 @@
 const express = require('express');
-const { createPin } = require('../controller/pinCtrl');
+const { register, login } = require('../controller/userCtrl');
 
 const router = express.Router();
 
-router.route('/new').post(createPin);
+router.route('/register').post(register);
+router.route('/login').post(login);
 
 module.exports = router;
